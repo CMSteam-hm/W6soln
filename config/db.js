@@ -3,9 +3,9 @@ require('dotenv').config(); // Make sure dotenv is loaded
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize({
-  username: process.env.leo,
-  password: process.env.Recreated,
-  database: process.env.localhost,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_HOST,
   host: process.env.DB_HOST || 'localhost',  // Fallback to localhost
   dialect: 'mysql'
 });
